@@ -6586,7 +6586,7 @@
       this.fullDescription = this.suite.fullTitle();
       this.description = this.suite.title;
       this.link = "?grep=" + (encodeURIComponent(this.fullDescription));
-      this.parent = this.suite.parent.root ? null : this.suite.parent;
+      this.parent = this.suite.root ? null : (this.suite.parent.root ? null : this.suite.parent);
       this.viewId = this.suite.viewId;
     }
 
